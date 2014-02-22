@@ -40,9 +40,13 @@ end
 #  DaemonKit.logger.error "Caught exception in job #{job.job_id}: '#{exception}'"
 #end
 
-DaemonKit::Cron.scheduler.every("1m") do
-  DaemonKit.logger.debug "Scheduled task completed at #{Time.now}"
+DaemonKit::Cron.scheduler.every("5s") do
+  `bundle exec rake -f '#{DAEMON_ROOT}/tasks/onboard.rake' onboard:customers`
 end
+
+#DaemonKit::Cron.scheduler.every("1m") do
+  #DaemonKit.logger.debug "Scheduled task completed at #{Time.now}"
+#end
 
 # Run our 'cron' dameon, suspending the current thread
 DaemonKit::Cron.run
