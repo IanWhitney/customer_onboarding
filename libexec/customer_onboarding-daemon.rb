@@ -42,6 +42,7 @@ end
 
 DaemonKit::Cron.scheduler.every("5s") do
   `bundle exec rake -f '#{DAEMON_ROOT}/tasks/onboard.rake' onboard:customers`
+  DaemonKit.logger.error "You done busted it"
 end
 
 #DaemonKit::Cron.scheduler.every("1m") do
