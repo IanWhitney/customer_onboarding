@@ -10,6 +10,8 @@ source 'https://rubygems.org'
 # Live on the edge instead: gem 'daemon-kit', :github => 'kennethkalmer/daemon-kit'
 gem 'daemon-kit'
 
+gem 'sqlite3'
+
 #
 # safely (http://github.com/kennethkalmer/safely)
 #
@@ -23,5 +25,5 @@ gem 'safely' # Optional, but recommended.
 gem 'rufus-scheduler', '>= 2.0.3'
 group :development, :test do
   gem 'rake'
-  gem 'rspec' 
+  gem 'rspec'
 end
