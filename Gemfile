@@ -22,7 +22,7 @@ gem 'safely' # Optional, but recommended.
 # gem 'mail' # For reporting exceptions via mail
 
 
-gem 'rufus-scheduler', '>= 2.0.3'
+gem 'rufus-scheduler', '~> 2.0'
 group :development, :test do
   gem 'rake'
   gem 'rspec'
