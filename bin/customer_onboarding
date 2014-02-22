@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+#
+# Stub executable for customer_onboarding
+#
+
+require File.expand_path('../../config/environment',  __FILE__)
+
+DaemonKit::Application.exec( DAEMON_ROOT + '/libexec/customer_onboarding-daemon.rb' )
